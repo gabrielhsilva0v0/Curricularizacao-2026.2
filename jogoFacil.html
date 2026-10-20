@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Tamanho</title>
+    <link rel="stylesheet" href="styleFacil.css">
+    <script src="scriptFacil.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <button class="voltar" id="btnVoltar" aria-label="Voltar">←</button>
+
+        <h1>Comparar tamanho</h1>
+
+        <div class="pontuacao">
+            <span class="estrela">★</span>
+            <span id="pontos">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="pergunta">
+            <h2 id="textoPergunta">
+                Qual desses animais é o MAIOR?
+            </h2>
+            <p id="mensagem" aria-live="polite"></p>
+        </section>
+
+        <section class="animais" id="animais"
+                 aria-label="Escolha um animal">
+        </section>
+
+        <div class="progresso">
+            <span id="rodada">Pergunta 1 de 6</span>
+            <button id="btnProximo" hidden>Próxima →</button>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #493018;
+    background:
+        radial-gradient(ellipse at 50% 75%, #b9d96b 0%, transparent 50%),
+        linear-gradient(#16bce9 0%, #9be8f5 35%, #378c37 70%, #164c27 100%);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background:
+        radial-gradient(ellipse at 5% 15%, #124c20 0 8%, transparent 9%),
+        radial-gradient(ellipse at 95% 18%, #124c20 0 9%, transparent 10%),
+        radial-gradient(ellipse at 5% 45%, #287b27 0 10%, transparent 11%),
+        radial-gradient(ellipse at 95% 48%, #287b27 0 10%, transparent 11%);
+}
+
+.topo {
+    position: relative;
+    z-index: 1;
+    width: min(96%, 1450px);
+    margin: 20px auto 24px;
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    align-items: center;
+    gap: 16px;
+}
+
+.topo h1 {
+    text-align: center;
+    color: #fff7d9;
+    background: linear-gradient(#b66b1c, #79400d);
+    border: 6px solid #e9a32d;
+    border-radius: 18px;
+    padding: 12px;
+    font-size: clamp(23px, 3vw, 48px);
+    text-shadow: 2px 3px #63320d;
+    box-shadow: 0 5px 0 #754010;
+}
+
+.voltar {
+    width: 76px;
+    height: 76px;
+    border: 4px solid #ffdb56;
+    border-radius: 50%;
+    background: #ff9814;
+    color: white;
+    font-size: 52px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #b65a08;
+}
+
+.pontuacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #fff6dc;
+    border: 4px solid #ffc642;
+    border-radius: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.estrela {
+    color: #ffc400;
+    font-size: 48px;
+    text-shadow: 2px 2px #b47700;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    width: min(94%, 1250px);
+    margin: 0 auto 35px;
+}
+
+.pergunta {
+    min-height: 170px;
+    padding: 35px 20px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff6df;
+    border: 6px solid #ffb51b;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 #c17c13;
+}
+
+.pergunta h2 {
+    font-size: clamp(24px, 3.3vw, 44px);
+}
+
+#mensagem {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.animais {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.cartao {
+    min-width: 0;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #fff5d9;
+    border: 7px solid var(--borda);
+    border-radius: 48px;
+    box-shadow: 0 7px 0 #513b1f;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover:not(:disabled) {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 13px 0 #513b1f;
+}
+
+.cartao:focus-visible,
+button:focus-visible {
+    outline: 5px solid white;
+    outline-offset: 4px;
+}
+
+.cartao:disabled {
+    cursor: default;
+}
+
+.figura {
+    font-size: clamp(75px, 10vw, 145px);
+    line-height: 1.2;
+}
+
+.nome {
+    font-size: clamp(18px, 2vw, 27px);
+    font-weight: bold;
+    color: #493018;
+}
+
+.cartao.correto {
+    background: #e3ffd7;
+    border-color: #2ca83a;
+}
+
+.cartao.errado {
+    background: #ffe1d9;
+    border-color: #e45a43;
+}
+
+.progresso {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 2px #164c27;
+}
+
+#btnProximo {
+    padding: 14px 24px;
+    border: 3px solid #ffe28a;
+    border-radius: 18px;
+    background: #ff9814;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #b65a08;
+}
+
+#btnProximo:hover {
+    background: #f47e08;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+    .topo {
+        grid-template-columns: 55px 1fr 95px;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .voltar {
+        width: 52px;
+        height: 52px;
+        font-size: 35px;
+    }
+
+    .topo h1 {
+        padding: 10px 5px;
+        border-width: 3px;
+    }
+
+    .pontuacao {
+        padding: 5px;
+        gap: 4px;
+        font-size: 25px;
+    }
+
+    .estrela {
+        font-size: 30px;
+    }
+
+    .pergunta {
+        min-height: 130px;
+        border-radius: 30px;
+        margin-bottom: 22px;
+        padding: 22px 12px;
+    }
+
+    .animais {
+        gap: 10px;
+    }
+
+    .cartao {
+        min-height: 180px;
+        padding: 8px 3px;
+        border-width: 4px;
+        border-radius: 25px;
+        gap: 8px;
+    }
+
+    .figura {
+        font-size: clamp(45px, 12vw, 85px);
+    }
+
+    .nome {
+        font-size: 15px;
+    }
+
+    .progresso {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .animais {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao {
+        min-height: 150px;
+    }
+
+    .figura {
+        font-size: 75px;
+    }
+}
