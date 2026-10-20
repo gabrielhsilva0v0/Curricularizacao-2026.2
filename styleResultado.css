@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #80d8ff, #c8f7c5);
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border: 5px solid #b9eaff;
+    box-shadow: 0 10px 25px #367c8c30;
+}
+
+.animais {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #1688d4;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.mensagem {
+    color: #567080;
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.pontuacao {
+    background: #e8f8ff;
+    padding: 22px;
+    border-radius: 22px;
+    margin-bottom: 25px;
+}
+
+.pontuacao span {
+    color: #376a83;
+    font-size: 18px;
+}
+
+.pontuacao h2 {
+    color: #20a65a;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.pontuacao p {
+    color: #567080;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 18px;
+    background: #1688d4;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #086bb0;
+    transform: scale(1.04);
+}
+
+.rodape {
+    color: #648494;
+    font-size: 14px;
+    margin-top: 22px;
+}
