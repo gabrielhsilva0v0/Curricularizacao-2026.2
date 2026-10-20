@@ -1,0 +1,287 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #493018;
+    background: linear-gradient(
+        to bottom,
+        #19bce9 0%,
+        #9ceafa 48%,
+        #d7f3b0 100%
+    );
+    overflow: hidden;
+}
+
+.topo {
+    position: relative;
+    z-index: 2;
+    width: 94%;
+    max-width: 1200px;
+    margin: 14px auto;
+    display: grid;
+    grid-template-columns: 65px 1fr 110px;
+    gap: 12px;
+    align-items: center;
+}
+
+.botao-voltar {
+    width: 58px;
+    height: 58px;
+    border: 4px solid #ffd45b;
+    border-radius: 50%;
+    background: #ff9814;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #b65a08;
+}
+
+.topo h1 {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: clamp(21px, 3vw, 38px);
+    color: #fff6d9;
+    background: linear-gradient(#b66b1c, #79400d);
+    border: 5px solid #e9a32d;
+    border-radius: 18px;
+    text-shadow: 2px 2px #63320d;
+}
+
+.pontos {
+    padding: 12px 8px;
+    border: 3px solid #ffc642;
+    border-radius: 25px;
+    background: #fff6dc;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pergunta {
+    position: relative;
+    z-index: 2;
+    padding: 18px 12px;
+    text-align: center;
+    background: #fff6df;
+    border: 5px solid #ffb51b;
+    border-radius: 30px;
+    box-shadow: 0 5px #c17c13;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #8251c8;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pergunta h2 {
+    font-size: clamp(18px, 2.5vw, 30px);
+}
+
+.mistura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.nome-cor {
+    font-size: clamp(23px, 3vw, 36px);
+    font-weight: 900;
+}
+
+.mais,
+.igual {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: bold;
+}
+
+#mensagem {
+    min-height: 25px;
+    font-size: clamp(15px, 2vw, 21px);
+    font-weight: bold;
+}
+
+.area-jogo {
+    position: relative;
+    height: min(49vh, 440px);
+    min-height: 260px;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    background:
+        radial-gradient(ellipse at 20% 100%, #b8e879, transparent 50%),
+        linear-gradient(#83ddf4, #d7f7ff 80%, #b6e96d);
+    box-shadow: inset 0 0 25px rgba(35, 123, 150, 0.2);
+}
+
+.chao {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    background: #8acb44;
+    border-top: 4px solid #5b9e2e;
+}
+
+.bolha {
+    position: absolute;
+    bottom: -100px;
+    width: clamp(65px, 9vw, 95px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    animation: subir var(--duracao) linear forwards;
+    box-shadow:
+        inset -8px -10px 16px rgba(0, 0, 0, 0.12),
+        inset 7px 7px 13px rgba(255, 255, 255, 0.5),
+        0 5px 10px rgba(40, 80, 100, 0.16);
+    transition: filter 0.15s, scale 0.15s;
+}
+
+.bolha::before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 20%;
+    width: 22%;
+    height: 12%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    transform: rotate(-40deg);
+}
+
+.bolha:hover {
+    filter: brightness(1.12);
+    scale: 1.12;
+}
+
+.bolha:focus-visible {
+    outline: 4px solid #493018;
+    outline-offset: 3px;
+}
+
+.bolha.verde {
+    background: radial-gradient(circle at 30% 25%, #baff75, #52c82c 60%, #218d22);
+}
+
+.bolha.roxo {
+    background: radial-gradient(circle at 30% 25%, #e0b6ff, #a451e2 60%, #6d29a9);
+}
+
+.bolha.laranja {
+    background: radial-gradient(circle at 30% 25%, #ffe2a1, #ff9b20 60%, #df5d0b);
+}
+
+.bolha.azul {
+    background: radial-gradient(circle at 30% 25%, #a5edff, #2598ff 60%, #1454c5);
+}
+
+.bolha.amarelo {
+    background: radial-gradient(circle at 30% 25%, #fff8a1, #ffd62f 60%, #e2a900);
+}
+
+.bolha.vermelho {
+    background: radial-gradient(circle at 30% 25%, #ffb0a4, #ff5252 60%, #c82035);
+}
+
+.bolha.estourada {
+    pointer-events: none;
+    animation: estourar 0.18s ease-out forwards;
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-650px) rotate(25deg);
+    }
+}
+
+@keyframes estourar {
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 14px 4px;
+    color: #28552b;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (max-width: 550px) {
+    .topo {
+        grid-template-columns: 48px 1fr 78px;
+        gap: 6px;
+    }
+
+    .botao-voltar {
+        width: 44px;
+        height: 44px;
+        font-size: 29px;
+    }
+
+    .topo h1 {
+        font-size: 19px;
+        border-width: 3px;
+    }
+
+    .pontos {
+        font-size: 21px;
+        padding: 9px 4px;
+    }
+
+    .pergunta {
+        padding: 14px 8px;
+        border-radius: 23px;
+    }
+
+    .mistura {
+        gap: 8px;
+    }
+
+    .area-jogo {
+        height: 46vh;
+        min-height: 250px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bolha {
+        animation-duration: 12s !important;
+    }
+}
