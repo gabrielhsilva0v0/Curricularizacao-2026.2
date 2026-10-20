@@ -53,7 +53,7 @@ body {
         border-radius: 100px;
         box-shadow: 0 15px rgb(11, 168, 24);
         border: 10px solid rgb(68, 255, 83);
-        background-color: rgb(17, 226, 34);
+        background:linear-gradient( rgb(82, 255, 97),rgb(17, 226, 34));
     }
 
     a:hover {
