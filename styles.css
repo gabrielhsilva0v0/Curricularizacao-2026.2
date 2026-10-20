@@ -7,10 +7,13 @@
 }
 
 body {
-    /*adicionar imagem de fundo e filtro de blur*/
-
+        background-image: url(Assets/background.jpg);
+    background-repeat: repeat;
 }
 
+.background{
+
+}
 .textBox {
     position: absolute;
     left: 50vw;
