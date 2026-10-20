@@ -3,29 +3,60 @@
     margin:0;
     overflow: hidden;
 }
+body{
+    /*adicionar imagem de fundo e filtro de blur*/
+    
+}
 .textBox{
     position: absolute;
     left: 50vw;
     top: 50vh;
     width: 50vw;
+    min-width: 800px;
+    max-width: 1200px;
     height: 50vh;
+    min-height: 500px;
     transform: translate(-50%,-50%);
     border-radius: 60px;
+    border: 20px solid rgb(255, 173, 20);
+    box-shadow: 0 10px rgba(00, 00, 00,0.5);
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: aquamarine;
+    background-color: rgb(216, 130, 17);
 
     h1
     {
         font-size: 150px;
-
+        font-family: Arial, Helvetica, sans-serif;
     }
     p
     {
         font-size: 50px;
         text-align: center;
+    }
+    a
+    {
+        transition: box-shadow 0.1s ,transform 0.1s;
+        color: rgb(255,255,255);
+        text-decoration: none;
+        font-size: 75px;
+        padding: 20px 120px;
+        border-radius: 100px;
+        box-shadow: 0 15px rgb(11, 168, 24);
+        border:10px solid rgb(68, 255, 83) ;
+        background-color:rgb(17, 226, 34);
+    }
+    a:hover
+    {
+        transform: translateY(-15px);
+        box-shadow: 0 30px rgb(11, 168, 24);
+    }
+    a:active
+    {
+        transform: translateY(15px);
+        box-shadow: 0 0 rgb(11, 168, 24);
     }
 }
