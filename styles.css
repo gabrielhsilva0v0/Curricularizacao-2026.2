@@ -1,1 +1,31 @@
+*{
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+.textBox{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width: 50vw;
+    height: 50vh;
+    transform: translate(-50%,-50%);
+    border-radius: 60px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
 
+    h1
+    {
+        font-size: 150px;
+
+    }
+    p
+    {
+        font-size: 50px;
+        text-align: center;
+    }
+}
