@@ -9,11 +9,9 @@
 body {
         background-image: url(Assets/background.jpg);
     background-repeat: repeat;
-}
-
-.background{
 
 }
+
 .textBox {
     position: absolute;
     left: 50vw;
