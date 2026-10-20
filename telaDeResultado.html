@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="animais">🦁 🐵 🐘 🦋</div>
+
+        <h1>🎉 Parabéns!</h1>
+
+        <p class="mensagem">
+            Você terminou a aventura dos bichinhos!
+        </p>
+
+        <section class="pontuacao">
+            <span>⭐ Sua pontuação</span>
+            <h2 id="pontos">80 / 100</h2>
+            <p id="feedback">Você foi muito bem! 🐯</p>
+        </section>
+
+        <button onclick="jogarNovamente()">
+            🔄 Jogar novamente
+        </button>
+
+        <p class="rodape">
+            Continue aprendendo e se divertindo! 🌈
+        </p>
+    </main>
+
+    <script>
+        function jogarNovamente() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
