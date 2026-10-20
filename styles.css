@@ -3,6 +3,7 @@
     margin: 0;
     overflow: hidden;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -74,18 +75,28 @@ body {
 .titulo {
     font-size: 100px;
 }
-
+.txtDific{
+    justify-self: center;
+    z-index: 0;
+    width: 80%;
+    transform: translateY(120px);
+    padding: 10px 0 100px 0;
+    text-align: center;
+    background-color: rgb(184, 97, 15);
+    border: 10px solid rgb(238, 135, 51);
+    border-radius: 20px 20px 0 0 ;
+    border-bottom: 5px solid rgb(184, 97, 15);
+}
 .btnList {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(184, 97, 15);
-    border: 10px solid rgb(238, 135, 51);
+    
     padding: 20px;
     min-width: fit-content;
 
     a {
-
+        z-index: 1;
         width: 250px;
         max-width: 1000px;
         height: 250px;
