@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das Cores</title>
+    <link rel="stylesheet" href="styleDificil.css">
+    <script src="scriptDificil.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <button id="voltar" class="botao-voltar" aria-label="Voltar">←</button>
+        <h1>Desafio das Cores</h1>
+        <div class="pontos">⭐ <span id="pontos">15</span></div>
+    </header>
+
+    <main>
+        <section class="pergunta">
+            <span class="etiqueta">DIFICULDADE DIFÍCIL</span>
+            <h2>Qual cor aparece ao misturar:</h2>
+
+            <div class="mistura">
+                <span id="cor1" class="nome-cor">AZUL</span>
+                <span class="mais">+</span>
+                <span id="cor2" class="nome-cor">AMARELO</span>
+                <span class="igual">= ?</span>
+            </div>
+
+            <p id="mensagem" aria-live="polite">
+                Clique na bolha da cor correta!
+            </p>
+        </section>
+
+        <section class="area-jogo" id="areaJogo"
+                 aria-label="Bolhas de cores. Clique na resposta correta.">
+            <div class="chao"></div>
+        </section>
+
+        <footer>
+            <span id="progresso">Desafio 1 de 6</span>
+            <span>Encontre a cor certa!</span>
+        </footer>
+    </main>
+</body>
+</html>
