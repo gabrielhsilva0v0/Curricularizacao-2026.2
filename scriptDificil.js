@@ -176,26 +176,11 @@ function finalizarJogo() {
     clearInterval(intervaloBolhas);
     limparBolhas();
 
-    textoCor1.textContent = "PARABÉNS";
-    textoCor2.textContent = "";
-    textoPontos.textContent = pontos;
-
-    mensagem.textContent =
-        `Você terminou! Fez ${pontos - 15} pontos nesta fase!`;
-
-    progresso.textContent = "Desafio concluído!";
-
-    const reiniciar = document.createElement("button");
-    reiniciar.textContent = "Jogar novamente";
-    reiniciar.className = "botao-voltar";
-    reiniciar.style.cssText =
-        "width:auto;height:auto;padding:12px 22px;" +
-        "border-radius:18px;font-size:18px;margin-top:12px;";
-
-    reiniciar.addEventListener("click", reiniciarJogo);
-
-    mensagem.appendChild(document.createElement("br"));
-    mensagem.appendChild(reiniciar);
+    const pontosGanhos = pontos - 15;
+    localStorage.setItem("jogo_pontos", pontosGanhos);
+    localStorage.setItem("jogo_maximo", desafios.length * 5);
+    localStorage.setItem("jogo_dificuldade", "dificil");
+    window.location.href = "telaDeResultado.html";
 }
 
 function reiniciarJogo() {
@@ -209,8 +194,9 @@ function reiniciarJogo() {
     mostrarDesafio();
 }
 
-document.getElementById("voltar").addEventListener("click", () => {
-    window.location.href = "index.html";
+document.getElementById("voltar").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "menu.html";
 });
 
 mostrarDesafio();

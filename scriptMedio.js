@@ -79,7 +79,7 @@ function win(){
 function confetti(){const em=["⭐","🎉","✨","🎈"];
   for(let i=0;i<22;i++){const c=document.createElement("div");c.className="conf";c.textContent=em[i%4];
     c.style.left=Math.random()*100+"%";c.style.animationDelay=Math.random()*.5+"s";$("game").appendChild(c);setTimeout(()=>c.remove(),2400);}}
-function finish(){buildProg();$("final").textContent=score;$("end").style.display="flex";speak("Parabéns! Você acertou tudo!");confetti();}
+function finish(){buildProg();localStorage.setItem("jogo_pontos",score);localStorage.setItem("jogo_maximo",Q.length);localStorage.setItem("jogo_dificuldade","medio");$("final").textContent=score;$("end").style.display="flex";speak("Parabéns! Você acertou tudo!");confetti();setTimeout(()=>{window.location.href="telaDeResultado.html";},2600);}
 function restart(){cur=0;score=0;$("score").textContent=0;$("end").style.display="none";load();}
 
 $("go").onclick=()=>{$("start").style.display="none";beep(700);load();};

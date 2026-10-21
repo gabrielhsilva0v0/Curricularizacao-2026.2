@@ -159,20 +159,10 @@ function proximaPergunta() {
 }
 
 function mostrarResultado() {
-    textoPergunta.textContent = "Parabéns!";
-    areaAnimais.innerHTML = "";
-
-    mensagem.style.color = "#24852b";
-    mensagem.textContent =
-        `Você fez ${pontos} de ${perguntas.length * 5} pontos!`;
-
-    textoRodada.textContent = "Jogo concluído!";
-    btnProximo.textContent = "Jogar novamente";
-    btnProximo.hidden = false;
-
-    respondida = true;
-
-    btnProximo.onclick = reiniciarJogo;
+    localStorage.setItem("jogo_pontos", pontos);
+    localStorage.setItem("jogo_maximo", perguntas.length * 5);
+    localStorage.setItem("jogo_dificuldade", "facil");
+    window.location.href = "telaDeResultado.html";
 }
 
 function reiniciarJogo() {
