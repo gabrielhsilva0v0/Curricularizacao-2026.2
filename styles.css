@@ -8,8 +8,10 @@
 
 body {
         background-image: url(Assets/background.jpg);
-    background-repeat: repeat;
-
+        background-repeat:no-repeat;
+        background-size: cover;
+        backdrop-filter: brightness(100%) saturate(150%) hue-rotate(90deg) ;
+    filter:sa ;
 }
 
 .textBox {
