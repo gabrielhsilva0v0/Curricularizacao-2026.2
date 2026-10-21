@@ -73,9 +73,7 @@ body {
     height: 100vh;
 }
 
-.titulo {
-    font-size: 100px;
-}
+
 .txtDific{
     justify-self: center;
     z-index: 0;
