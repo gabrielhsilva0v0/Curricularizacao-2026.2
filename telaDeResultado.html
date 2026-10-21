@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado do Jogo</title>
     <link rel="stylesheet" href="styleResultado.css">
+    <link rel="shortcut icon" href="Assets/star.png" type="image/png">
 </head>
 <body>
 
-    <main class="container">
+    <main class="container" data-testid="tela-resultado">
         <div class="animais">🦁 🐵 🐘 🦋</div>
 
         <h1>🎉 Parabéns!</h1>
@@ -20,12 +20,17 @@
 
         <section class="pontuacao">
             <span>⭐ Sua pontuação</span>
-            <h2 id="pontos">80 / 100</h2>
-            <p id="feedback">Você foi muito bem! 🐯</p>
+            <h2 id="pontos" data-testid="texto-pontuacao">0 / 0</h2>
+            <p id="feedback" data-testid="texto-feedback">Boa jornada! 🐯</p>
         </section>
 
-        <button onclick="jogarNovamente()">
+        <button onclick="jogarNovamente()" data-testid="btn-jogar-novamente">
             🔄 Jogar novamente
+        </button>
+
+        <button onclick="voltarMenu()" data-testid="btn-voltar-menu"
+                style="margin-top:12px; background:#ff9814;">
+            🏠 Voltar ao menu
         </button>
 
         <p class="rodape">
@@ -34,8 +39,46 @@
     </main>
 
     <script>
+        const dados = {
+            pontos: parseInt(localStorage.getItem("jogo_pontos") || "0", 10),
+            maximo: parseInt(localStorage.getItem("jogo_maximo") || "0", 10),
+            dificuldade: localStorage.getItem("jogo_dificuldade") || "facil"
+        };
+
+        const el = document.getElementById("pontos");
+        const fb = document.getElementById("feedback");
+
+        if (dados.maximo > 0) {
+            el.textContent = `${dados.pontos} / ${dados.maximo}`;
+        } else {
+            el.textContent = `${dados.pontos}`;
+        }
+
+        const porcentagem = dados.maximo > 0
+            ? (dados.pontos / dados.maximo) * 100
+            : 0;
+
+        if (porcentagem >= 80) {
+            fb.textContent = "Incrível! Você mandou muito bem! 🏆";
+        } else if (porcentagem >= 50) {
+            fb.textContent = "Muito bem! Continue praticando! 🐯";
+        } else if (porcentagem > 0) {
+            fb.textContent = "Boa tentativa! Tente de novo! 🦉";
+        } else {
+            fb.textContent = "Não desista! Você consegue! 🌟";
+        }
+
         function jogarNovamente() {
-            window.location.href = "jogoFacil.html";
+            const mapa = {
+                facil: "jogoFacil.html",
+                medio: "jogoMedio.html",
+                dificil: "jogoDificil.html"
+            };
+            window.location.href = mapa[dados.dificuldade] || "jogoFacil.html";
+        }
+
+        function voltarMenu() {
+            window.location.href = "menu.html";
         }
     </script>
 
