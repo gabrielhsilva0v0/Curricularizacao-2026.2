@@ -118,12 +118,17 @@ function criarBolha() {
         } else {
             bolha.classList.add("estourada");
             bolha.disabled = true;
-
+            bloqueado = true;
+            clearInterval(intervaloBolhas);
             mensagem.textContent =
-                "Quase! Procure a cor certa!";
+                "Quase! Você acerta na próxima.";
             mensagem.style.color = "#b34a24";
-
+            
             setTimeout(() => bolha.remove(), 200);
+            setTimeout(() => {
+            rodada++;
+            mostrarDesafio();
+    }, 850);
         }
     });
 
