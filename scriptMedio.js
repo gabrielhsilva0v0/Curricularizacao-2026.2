@@ -2,11 +2,11 @@
 const Q = [
   {
     t: "Coloque o ursinho <b>EM CIMA</b> da cama.", say: "Coloque o ursinho em cima da cama.",
-    objs: [{ e: "🛏️", x: 50, y: 70, s: 150 }, { e: "🪑", x: 14, y: 72, s: 80 }], item: { e: "🧸", x: 84, y: 80, s: 70 }, zone: { x: 50, y: 65, w: 1, h: 2 }
+    objs: [{ e: "🛏️", x: 50, y: 70, s: 150 }, { e: "🪑", x: 14, y: 72, s: 80 }], item: { e: "🧸", x: 84, y: 80, s: 70 }, zone: { x: 50, y: 65, w: 4, h: 4 }
   },
   {
     t: "Coloque o sapato <b>EMBAIXO</b> da cadeira.", say: "Coloque o sapato embaixo da cadeira.",
-    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 65, w: 3, h: 10 }
+    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 65, w: 2, h: 10 }
   },
   {
     t: "Coloque o lápis <b>DENTRO</b> do estojo.", say: "Coloque o lápis dentro do estojo.",
@@ -14,7 +14,7 @@ const Q = [
   },
   {
     t: "Coloque a bola <b>FORA</b> da caixa.", say: "Coloque a bola fora da caixa.",
-    objs: [{ e: "📦", x: 50, y: 60, s: 150 }], item: { e: "⚽", x: 50, y: 62, s: 56 }, outside: { x: 26, y: 25, w: 48, h: 68 }, zone: { x: 26, y: 25, w: 48, h: 68 }
+    objs: [{ e: "📦", x: 50, y: 60, s: 150 }], item: { e: "⚽", x: 50, y: 62, s: 56 }, outside: { x: 26, y: 25, w: 2, h: 2 }, zone: { x: 26, y: 25, w: 2, h: 2 }
   },
   {
     t: "Coloque a estrela do lado <b>ESQUERDO</b> da lua.", say: "Coloque a estrela do lado esquerdo da lua.",
