@@ -7,7 +7,7 @@
 }
 
 .bg {
-    background-image: url(Assets/background.jpg);
+    background-image: url(https://share.google/gK7NJb3Y99jBL9xGQ);
     background-repeat: repeat;
     z-index: 0;
 }
@@ -25,21 +25,21 @@
     z-index: 1;
     left: 50vw;
     top: 50vh;
-    width: 50vw;
+    width: 30vw;
     min-width: 800px;
-    max-width: 1200px;
+    max-width: 800px;
     height: 50vh;
     min-height: 500px;
     transform: translate(-50%, -50%);
     border-radius: 60px;
-    border: 20px solid rgb(255, 173, 20);
+    border: 20px solid rgb(20, 71, 255);
     box-shadow: 0 10px rgba(00, 00, 00, 0.5);
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(216, 130, 17);
+    background-color: rgb(66, 176, 255);
 
     h1 {
         font-size: 100px;
