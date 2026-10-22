@@ -11,15 +11,16 @@
     background-repeat: repeat;
     z-index: 0;
 }
-.bg2
-{
+
+.bg2 {
     background-image: url(Assets/bg.avif);
     background-repeat: repeat;
     backdrop-filter: blur(20px) hue-rotate(180deg);
     z-index: 0;
 }
+
 .textBox {
-    
+
     position: absolute;
     z-index: 1;
     left: 50vw;
@@ -60,6 +61,10 @@
         box-shadow: 0 15px rgb(11, 168, 24);
         border: 10px solid rgb(68, 255, 83);
         background: linear-gradient(rgb(82, 255, 97), rgb(17, 226, 34));
+        animation-name: shine;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
     }
 
     a:hover {
@@ -80,15 +85,16 @@
     justify-content: space-around;
     height: 100vh;
     width: 100vw;
-    
+
 }
 
-.dificuldade{
-        animation-name: wobble;
+.dificuldade {
+    animation-name: wobble;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-    animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
 }
+
 .txtDific {
     justify-self: center;
     z-index: 0;
@@ -100,7 +106,7 @@
     border: 10px solid rgb(253, 148, 62);
     border-radius: 20px 20px 0 0;
     border-bottom: 5px solid rgb(184, 97, 15);
-    
+
 }
 
 .btnList {
@@ -110,10 +116,11 @@
     padding: 50px;
     min-width: fit-content;
 
-        animation-name: wobble;
+    animation-name: wobble;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
+
     a {
         transition: box-shadow 0.1s, transform 0.1s;
         z-index: 1;
@@ -186,15 +193,17 @@ a:hover {
         white -5px 5px 25px,
         white 5px -5px 25px,
         white -5px -5px 25px;
+    filter: brightness(150%);
 
 }
-.titulo{
+
+.titulo {
     width: 80vw;
     display: flex;
     justify-content: center;
 }
-.titleImg
-{
+
+.titleImg {
     transition: transform 1s;
     align-self: center;
     justify-self: center;
@@ -202,10 +211,30 @@ a:hover {
     animation-name: wobble;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
 }
+
 @keyframes wobble {
-    0%{transform: translateY(0px);}
-    50%{transform: translateY(-20px);
+    0% {
+        transform: translateY(0px);
     }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes shine {
+    70% {
+        filter: brightness(100%);
+    }
+
+    80% {
+        filter: brightness(250%);
+    }
+
+    90% {
+        filter: brightness(100%);
+    }
+
 }
