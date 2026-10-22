@@ -8,7 +8,7 @@
 
 .bg {
     background-image: url(Assets/background.jpg);
-    background-repeat: repeat;
+    background-size: cover;
     z-index: 0;
 }
 
