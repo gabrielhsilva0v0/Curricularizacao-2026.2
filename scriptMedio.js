@@ -6,7 +6,7 @@ const Q = [
   },
   {
     t: "Coloque o sapato <b>EMBAIXO</b> da cadeira.", say: "Coloque o sapato embaixo da cadeira.",
-    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 55, w: 4, h: 10 }
+    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 55, w: 3, h: 10 }
   },
   {
     t: "Coloque o lápis <b>DENTRO</b> do estojo.", say: "Coloque o lápis dentro do estojo.",
@@ -14,7 +14,7 @@ const Q = [
   },
   {
     t: "Coloque a bola <b>FORA</b> da caixa.", say: "Coloque a bola fora da caixa.",
-    objs: [{ e: "📦", x: 50, y: 60, s: 150 }], item: { e: "⚽", x: 50, y: 62, s: 56 }, outside: { x: 26, y: 25, w: 2, h: 2 }, zone: { x: 26, y: 25, w: 2, h: 2 }
+    objs: [{ e: "📦", x: 50, y: 60, s: 150 }], item: { e: "⚽", x: 50, y: 62, s: 56 }, outside: { x: 26, y: 25, w: 1, h: 1 }, zone: { x: 26, y: 25, w: 1, h: 1 }
   },
   {
     t: "Coloque a estrela do lado <b>ESQUERDO</b> da lua.", say: "Coloque a estrela do lado esquerdo da lua.",
@@ -82,7 +82,7 @@ function bindDrag() {
 function inside(X, Y, z) { return X >= z.x && X <= z.x + z.w && Y >= z.y && Y <= z.y + z.h; }
 
 function check(X, Y) {
-  const q = Q[cur]; const P = 2, z = q.zone; const ok = q.outside ? (X < 36 || X > 64 || Y < 28 || Y > 92) : inside(X, Y, { x: z.x - P, y: z.y - P, w: z.w + 2 * P, h: z.h + 2 * P });
+  const q = Q[cur]; const P = 2, z = q.zone; const ok = q.outside ? (X < 45 || X > 55 || Y < 50 || Y > 70) : inside(X, Y, { x: z.x - P, y: z.y - P, w: z.w + 2 * P, h: z.h + 2 * P });
   if (ok) { win(); return; }
   tries++; beep(220, .25, "triangle"); show("Tente de novo! 💪");
   item.classList.add("back"); item.style.left = q.item.x + "%"; item.style.top = q.item.y + "%";
