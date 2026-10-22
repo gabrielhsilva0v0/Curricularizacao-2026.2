@@ -6,7 +6,7 @@ const Q = [
   },
   {
     t: "Coloque o sapato <b>EMBAIXO</b> da cadeira.", say: "Coloque o sapato embaixo da cadeira.",
-    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 65, w: 2, h: 10 }
+    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 60, w: 4, h: 10 }
   },
   {
     t: "Coloque o lápis <b>DENTRO</b> do estojo.", say: "Coloque o lápis dentro do estojo.",

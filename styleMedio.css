@@ -22,7 +22,7 @@ body {
     touch-action: none;
     overscroll-behavior: none;
     font-family: "Trebuchet MS", "Comic Sans MS", system-ui, sans-serif;
-    background: #1d6b34
+    background: linear-gradient(#9be7ff 0, #bff0a0 35%, var(--bg1) 60%, var(--bg2));
 }
 
 body {
