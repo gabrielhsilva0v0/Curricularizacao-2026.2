@@ -1,52 +1,84 @@
-
 const perguntas = [
+    
     {
         pergunta: "Qual desses animais é o MAIOR?",
-        animais: [
+        animais: embaralhar([
             { nome: "Elefante", emoji: "🐘", tamanho: 3 },
-            { nome: "Borboleta", emoji: "🦋", tamanho: 1 },
-            { nome: "Sapo", emoji: "🐸", tamanho: 2 }
-        ]
-    },
-    {
-        pergunta: "Qual desses animais é o MENOR?",
-        animais: [
-            { nome: "Girafa", emoji: "🦒", tamanho: 3 },
-            { nome: "Formiga", emoji: "🐜", tamanho: 1 },
-            { nome: "Cachorro", emoji: "🐶", tamanho: 2 }
-        ]
-    },
-    {
-        pergunta: "Qual desses animais é o MAIOR?",
-        animais: [
             { nome: "Coelho", emoji: "🐰", tamanho: 1 },
-            { nome: "Leão", emoji: "🦁", tamanho: 3 },
-            { nome: "Gato", emoji: "🐱", tamanho: 2 }
-        ]
+            { nome: "Sapo", emoji: "🐸", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)
     },
     {
         pergunta: "Qual desses animais é o MENOR?",
-        animais: [
-            { nome: "Baleia", emoji: "🐳", tamanho: 3 },
-            { nome: "Macaco", emoji: "🐵", tamanho: 2 },
-            { nome: "Joaninha", emoji: "🐞", tamanho: 1 }
-        ]
+        animais: embaralhar([
+            { nome: "Girafa", emoji: "🦒", tamanho: 3 },
+            { nome: "Cachorro", emoji: "🐶", tamanho: 2 },
+            { nome: "Gato", emoji: "🐱", tamanho: 1 }
+        ]).sort(() => Math.random() - 0.5)
     },
     {
         pergunta: "Qual desses animais é o MAIOR?",
-        animais: [
+        animais: embaralhar([
+            { nome: "Leão", emoji: "🦁", tamanho: 3 },
+            { nome: "Hamster", emoji: "🐹", tamanho: 1 },
+            { nome: "Macaco", emoji: "🐵", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)
+    },
+    {
+        pergunta: "Qual desses animais é o MENOR?",
+        animais: embaralhar([
+            { nome: "Baleia", emoji: "🐳", tamanho: 3 },
+            { nome: "Porco-espinho", emoji: "🦔", tamanho: 1 },
+            { nome: "Pato", emoji: "🦆", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)
+    },
+    {
+        pergunta: "Qual desses animais é o MAIOR?",
+        animais: embaralhar([
             { nome: "Cavalo", emoji: "🐴", tamanho: 2 },
             { nome: "Rato", emoji: "🐭", tamanho: 1 },
-            { nome: "Elefante", emoji: "🐘", tamanho: 3 }
-        ]
+            { nome: "Rinoceronte", emoji: "🦏", tamanho: 3 }
+        ]).sort(() => Math.random() - 0.5)
     },
     {
         pergunta: "Qual desses animais é o MENOR?",
-        animais: [
+        animais: embaralhar([
             { nome: "Tubarão", emoji: "🦈", tamanho: 3 },
-            { nome: "Borboleta", emoji: "🦋", tamanho: 1 },
+            { nome: "Pinguim", emoji: "🐧", tamanho: 1 },
             { nome: "Urso", emoji: "🐻", tamanho: 2 }
-        ]
+        ]).sort(() => Math.random() - 0.5)
+    },
+    {
+        pergunta: "Qual desses animais é o MENOR?",
+        animais: embaralhar([
+            { nome: "Canguru", emoji: "🦘", tamanho: 3 },
+            { nome: "Pintinho", emoji: "🐥", tamanho: 1 },
+            { nome: "Ovelha", emoji: "🐑", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)   
+    },
+    {
+        pergunta: "Qual desses animais é o MAIOR?",
+        animais: embaralhar([
+            { nome: "Esquilo", emoji: "🐿️", tamanho: 1 },
+            { nome: "Crocodilo", emoji: "🐊", tamanho: 3 },
+            { nome: "Porco", emoji: "🐷", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)   
+    },
+    {
+        pergunta: "Qual desses animais é o MENOR?",
+        animais: embaralhar([
+            { nome: "Hipopótamo", emoji: "🦛", tamanho: 3 },
+            { nome: "Esquilo", emoji: "🐿️", tamanho: 1 },
+            { nome: "Castor", emoji: "🦫", tamanho: 2 }
+        ]).sort(() => Math.random() - 0.5)   
+    },
+    {
+        pergunta: "Qual desses animais é o MAIOR?",
+        animais: embaralhar([
+             { nome: "Panda", emoji: "🐼", tamanho: 3 },
+            { nome: "Coala", emoji: "🐨", tamanho: 2 },
+            { nome: "Lontra", emoji: "🦦", tamanho: 1 }
+        ]).sort(() => Math.random() - 0.5)   
     }
 ];
 
@@ -62,6 +94,17 @@ const textoRodada = document.getElementById("rodada");
 const btnProximo = document.getElementById("btnProximo");
 const btnVoltar = document.getElementById("btnVoltar");
 
+function embaralhar(array) {
+    const copia = [...array];
+
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+
+    return copia;
+}
 function mostrarPergunta() {
     const atual = perguntas[indicePergunta];
 
