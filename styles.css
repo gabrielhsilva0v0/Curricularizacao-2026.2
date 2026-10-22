@@ -124,8 +124,8 @@
     a {
         transition: box-shadow 0.1s, transform 0.1s;
         z-index: 1;
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         max-width: 1000px;
         margin: 0 10px;
         color: #fff;
