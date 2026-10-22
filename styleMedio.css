@@ -22,7 +22,7 @@ body {
     touch-action: none;
     overscroll-behavior: none;
     font-family: "Trebuchet MS", "Comic Sans MS", system-ui, sans-serif;
-    background: #1d6b34
+    background: linear-gradient(#9be7ff 0, #bff0a0 35%, var(--bg1) 60%, var(--bg2));
 }
 
 body {
@@ -32,7 +32,7 @@ body {
 
 #game {
     width: 100%;
-    max-width: 100vw;
+    max-width: 75vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -79,6 +79,8 @@ header {
     color: #fff;
     font-size: 22px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     box-shadow: 0 3px 0 rgba(0, 0, 0, .2)
 }
 
