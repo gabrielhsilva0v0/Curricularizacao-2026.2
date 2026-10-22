@@ -79,6 +79,8 @@ header {
     color: #fff;
     font-size: 22px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     box-shadow: 0 3px 0 rgba(0, 0, 0, .2)
 }
 
