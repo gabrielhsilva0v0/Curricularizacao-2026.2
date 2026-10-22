@@ -167,11 +167,13 @@ function verificarResposta(animalEscolhido, cartaoEscolhido) {
         mensagem.style.color = "#24852b";
 
         cartaoEscolhido.classList.add("correto");
+        setTimeout(() => {proximaPergunta();}, 800);
     } else {
         mensagem.textContent = "Quase! Vamos aprender juntos!";
         mensagem.style.color = "#b34a24";
 
         cartaoEscolhido.classList.add("errado");
+        setTimeout(() => {proximaPergunta();}, 800);
     }
 
     const cartoes = areaAnimais.querySelectorAll(".cartao");
