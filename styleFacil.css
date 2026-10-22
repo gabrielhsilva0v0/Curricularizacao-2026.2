@@ -43,26 +43,26 @@ body::before {
 .topo h1 {
     text-align: center;
     color: #fff7d9;
-    background: linear-gradient(#b66b1c, #79400d);
-    border: 6px solid #e9a32d;
+    background: linear-gradient(#09e252, #15cfa7);
+    border: 6px solid #6bfa9b;
     border-radius: 18px;
     padding: 12px;
     font-size: clamp(23px, 3vw, 48px);
-    text-shadow: 2px 3px #63320d;
-    box-shadow: 0 5px 0 #754010;
+    text-shadow: 2px 3px #067e60;
+    box-shadow: 0 5px 0 #5ef0dc;
 }
 
 .voltar {
     width: 76px;
     height: 76px;
-    border: 4px solid #ffdb56;
+    border: 4px solid #64cec8;
     border-radius: 50%;
-    background: #ff9814;
-    color: white;
+    background: #14ff9d;
+    color: rgb(255, 255, 255);
     font-size: 52px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 0 #b65a08;
+    box-shadow: 0 4px 0 #08b0b6;
 }
 
 .pontuacao {
@@ -132,17 +132,17 @@ main {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background: #fff5d9;
+    background: linear-gradient(#a6d1ca, #2fe647);
     border: 7px solid var(--borda);
     border-radius: 48px;
-    box-shadow: 0 7px 0 #513b1f;
+    box-shadow: 0 7px 0 #fff3e3;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .cartao:hover:not(:disabled) {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 13px 0 #513b1f;
+    box-shadow: 0 13px 0 #ffeacf;
 }
 
 .cartao:focus-visible,
@@ -172,7 +172,7 @@ button:focus-visible {
 }
 
 .cartao.errado {
-    background: #ffe1d9;
+    background: #ffdfd9;
     border-color: #e45a43;
 }
 
