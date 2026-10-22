@@ -188,7 +188,6 @@ function verificarResposta(animalEscolhido, cartaoEscolhido) {
         btnProximo.textContent = "Próxima →";
     }
 
-    btnProximo.hidden = false;
 }
 
 function proximaPergunta() {
