@@ -198,7 +198,8 @@ a:hover {
 }
 
 .titulo {
-    width: 80vw;
+    width: 60vw;
+    max-width: 60vw;
     display: flex;
     justify-content: center;
 }
