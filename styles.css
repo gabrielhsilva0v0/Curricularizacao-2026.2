@@ -7,30 +7,36 @@
 }
 
 .bg {
-    background-image: url(https://share.google/gK7NJb3Y99jBL9xGQ);
+    background-image: url(Assets/bg.avif);
+    backdrop-filter: blur(5px) hue-rotate(180deg);
     background-repeat: repeat;
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg2 {
     background-image: url(Assets/bg.avif);
     background-repeat: repeat;
-    backdrop-filter: blur(20px) hue-rotate(180deg);
+    backdrop-filter: blur(5px) hue-rotate(180deg);
     z-index: 0;
 }
 
 .textBox {
 
-    position: absolute;
+
     z-index: 1;
-    left: 50vw;
-    top: 50vh;
+
     width: 30vw;
     min-width: 800px;
     max-width: 800px;
     height: 50vh;
     min-height: 500px;
-    transform: translate(-50%, -50%);
+    
     border-radius: 60px;
     border: 20px solid rgb(20, 71, 255);
     box-shadow: 0 10px rgba(00, 00, 00, 0.5);
