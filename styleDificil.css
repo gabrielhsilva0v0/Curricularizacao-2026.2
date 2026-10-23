@@ -8,6 +8,15 @@
     --amarelo: #ffd23f;
     --verde: #3ccf4e;
     --azul: #27b4f5;
+    --verdeClaro: #1dff25;
+    --azulClaro : #50aaff;
+    --marrom : #502d0a;
+    --rosa : #ff6b97;
+    --ciano : #009297;
+    --branco : #cac9c9;
+    --preto: #0f0f0f;
+    --cinza: #888888;
+    --violeta: #a305ff;
 }
 
 * {
@@ -283,13 +292,31 @@ main {
     outline-offset: 3px;
 }
 
-.bolha.verde    { background: radial-gradient(circle at 30% 25%, #baff75, #52c82c 60%, #218d22); }
-.bolha.roxo     { background: radial-gradient(circle at 30% 25%, #e0b6ff, #a451e2 60%, #6d29a9); }
+.bolha.verde    { background: radial-gradient(circle at 30% 25%, #baff75, #279402 60%, #055007); }
+.bolha.roxo     { background: radial-gradient(circle at 30% 25%, #e0b6ff, #2a0149 60%, #32025c); }
 .bolha.laranja  { background: radial-gradient(circle at 30% 25%, #ffe2a1, #ff9b20 60%, #df5d0b); }
-.bolha.azul     { background: radial-gradient(circle at 30% 25%, #a5edff, #2598ff 60%, #1454c5); }
-.bolha.amarelo  { background: radial-gradient(circle at 30% 25%, #fff8a1, #ffd62f 60%, #e2a900); }
+.bolha.azul     { background: radial-gradient(circle at 30% 25%, #a5edff, #052a4b 60%, #032053); }
+.bolha.amarelo  { background: radial-gradient(circle at 30% 25%, #fff8a1, #ffde58 60%, #f3ff47); }
 .bolha.vermelho { background: radial-gradient(circle at 30% 25%, #ffb0a4, #ff5252 60%, #c82035); }
-
+.bolha.verdeClaro { background: radial-gradient(circle at 30% 25%, #acffa4, #30ff37 60%, #37ff3e); }
+.bolha.azulClaro { background: radial-gradient(circle at 30% 25%, #a4fff7, #3ea2ff 60%, #3ca1ff); }
+.bolha.rosa { background: radial-gradient(circle at 30% 25%, #ffb0a4, #ff6b97 60%, #ff6b97); }
+.bolha.ciano  { background: radial-gradient(circle at 30% 25%, #a4fcff, #156568 60%, #157555); }
+.bolha.branco { background: radial-gradient(circle at 30% 25%, #ece9e9, #cac9c9 60%, #cac9c9); }
+.bolha.preto { background: radial-gradient(circle at 30% 25%, #f1f0f0, #0f0f0f 60%, #0f0f0f); }
+.bolha.cinza { background: radial-gradient(circle at 30% 25%, #dfd9d8, #888888 60%, #888888); }
+.bolha.marrom  { background: radial-gradient(circle at 30% 25%, #ebe5e4, #502d0a 60%, #502d0a); }
+.bolha.violeta { background: radial-gradient(circle at 30% 25%, #ffa4eb, #a305ff 60%, #a305ff); }
+/*
+    --verdeClaro: #1dff25;
+    --azulClaro : #50aaff;
+    --marrom : #502d0a;
+    --rosa : #ff6b97;
+    --ciano : #009297;
+    --branco : #cac9c9;
+    --preto: #0f0f0f;
+    --cinza: #888888;
+    --violeta: #a305ff;*/
 .bolha.estourada {
     pointer-events: none;
     animation: estourar 0.25s ease-out forwards;

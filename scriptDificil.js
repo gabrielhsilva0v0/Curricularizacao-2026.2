@@ -3,9 +3,13 @@ const desafios = [
     { cor1: "azul", cor2: "amarelo", resposta: "verde" },
     { cor1: "vermelho", cor2: "azul", resposta: "roxo" },
     { cor1: "vermelho", cor2: "amarelo", resposta: "laranja" },
-    { cor1: "azul", cor2: "vermelho", resposta: "roxo" },
-    { cor1: "amarelo", cor2: "vermelho", resposta: "laranja" },
-    { cor1: "amarelo", cor2: "azul", resposta: "verde" }
+    { cor1: "azul", cor2: "branco", resposta: "azulClaro" },
+    { cor1: "verde", cor2: "vermelho", resposta: "marrom" },
+    { cor1: "vermelho", cor2: "branco", resposta: "rosa" },
+    { cor1: "verde", cor2: "azul", resposta: "ciano" },
+    { cor1: "verde", cor2: "branco", resposta: "verdeClaro" },
+    { cor1: "branco", cor2: "preto", resposta: "cinza" },
+    { cor1: "roxo", cor2: "rosa", resposta: "violeta" }
 ];
 
 const nomes = {
@@ -14,7 +18,16 @@ const nomes = {
     vermelho: "VERMELHO",
     verde: "VERDE",
     roxo: "ROXO",
-    laranja: "LARANJA"
+    laranja: "LARANJA",
+    verdeClaro: "VERDE CLARO",
+    azulClaro : "AZUL CLARO",
+    marrom : "MARROM",
+    rosa : "ROSA",
+    ciano : "CIANO",
+    branco : "BRANCO",
+    preto: "PRETO", 
+    cinza: "CINZA",
+    violeta: "VIOLETA"
 };
 
 const areaJogo = document.getElementById("areaJogo");
@@ -36,7 +49,16 @@ const todasCores = [
     "laranja",
     "azul",
     "amarelo",
-    "vermelho"
+    "vermelho",
+    "verdeClaro",
+    "azulClaro",
+    "marrom",
+    "rosa",
+    "ciano",
+    "branco",
+    "preto", 
+    "cinza",
+    "violeta"
 ];
 
 function mostrarDesafio() {
@@ -67,12 +89,21 @@ function mostrarDesafio() {
 
 function corHex(cor) {
     const cores = {
-        azul: "#1676d2",
+        azul: "#07335c",
         amarelo: "#dca900",
         vermelho: "#df3535",
         verde: "#258e29",
-        roxo: "#843cba",
-        laranja: "#ed7a08"
+        roxo: "#400070",
+        laranja: "#ed7a08",
+        verdeClaro: "#1dff25",
+        azulClaro : "#50aaff",
+        marrom : "#502d0a",
+        rosa : "#ff6b97",
+        ciano : "#009297",
+        branco : "#cac9c9",
+        preto: "#0f0f0f", 
+        cinza: "#888888",
+        violeta: "#a305ff"
     };
 
     return cores[cor];

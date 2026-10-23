@@ -2,27 +2,45 @@
 const Q = [
   {
     t: "Coloque o ursinho <b>EM CIMA</b> da cama.", say: "Coloque o ursinho em cima da cama.",
-    objs: [{ e: "🛏️", x: 50, y: 70, s: 150 }, { e: "🪑", x: 14, y: 72, s: 80 }], item: { e: "🧸", x: 84, y: 80, s: 70 }, zone: { x: 50, y: 65, w: 3, h: 3 }
-  },
-  {
-    t: "Coloque o sapato <b>EMBAIXO</b> da cadeira.", say: "Coloque o sapato embaixo da cadeira.",
-    objs: [{ e: "🪑", x: 50, y: 50, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 60 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 55, w: 3, h: 10 }
-  },
-  {
-    t: "Coloque o lápis <b>DENTRO</b> do estojo.", say: "Coloque o lápis dentro do estojo.",
-    objs: [{ e: "📚", x: 12, y: 70, s: 70 }, { e: "🍎", x: 90, y: 70, s: 50 }], caseBox: { x: 50, y: 66, w: 52, h: 26 }, item: { e: "✏️", x: 82, y: 25, s: 70 }, zone: { x: 26, y: 52, w: 48, h: 28 }
+    objs: [{ e: "🛏️", x: 50, y: 70, s: 150 }, { e: "🪑", x: 14, y: 72, s: 120 }, { e: "⚽", x: 75, y: 72, s: 80 }, { e: "🪟", x: 50, y: 50, s: 200 }], item: { e: "🧸", x: 84, y: 80, s: 70 }, zone: { x: 50, y: 65, w: 3, h: 3 }
   },
   {
     t: "Coloque a bola <b>FORA</b> da caixa.", say: "Coloque a bola fora da caixa.",
     objs: [{ e: "📦", x: 50, y: 60, s: 150 }], item: { e: "⚽", x: 50, y: 62, s: 56 }, outside: { x: 26, y: 25, w: 1, h: 1 }, zone: { x: 26, y: 25, w: 1, h: 1 }
   },
   {
-    t: "Coloque a estrela do lado <b>ESQUERDO</b> da lua.", say: "Coloque a estrela do lado esquerdo da lua.",
-    dark: true, objs: [{ e: "🌙", x: 50, y: 48, s: 140 }], item: { e: "⭐", x: 86, y: 78, s: 64 }, zone: { x: 4, y: 15, w: 34, h: 72 }
+    t: "Coloque o Dinossauro<b>EM CIMA</b> da cadeira.", say: "Coloque o dinossauro em cima da cadeira.",
+    objs: [{ e: "🛏️", x: 50, y: 70, s: 150 }, { e: "🪑", x: 14, y: 72, s: 120 }, { e: "🧸", x: 75, y: 72, s: 80 }, { e: "🪟", x: 50, y: 50, s: 200 }], item: { e: "🦖", x: 60, y: 90, s: 70 }, zone: { x: 14, y: 68, w: 3, h: 3 }
+  },
+  {
+    t: "Coloque o lápis <b>DENTRO</b> do estojo.", say: "Coloque o lápis dentro do estojo.",
+    objs: [{ e: "📚", x: 12, y: 70, s: 150 }, { e: "🍎", x: 90, y: 70, s: 80 }], caseBox: { x: 50, y: 66, w: 52, h: 26 }, item: { e: "✏️", x: 82, y: 80, s: 70 }, zone: { x: 26, y: 52, w: 48, h: 28 }
+  },
+
+  {
+    t: "Coloque a tesoura <b>DENTRO</b> do estojo.", say: "Coloque a tesoura dentro do estojo.",
+    objs: [{ e: "📚", x: 12, y: 70, s: 150 }, {e: "✏️", x: 82, y: 25, s: 70  }], caseBox: { x: 50, y: 66, w: 52, h: 26 }, item: {e: "✂️", x: 90, y: 70, s: 70  }, zone: { x: 26, y: 52, w: 48, h: 28 }
+  },
+  {
+    t: "Coloque o sapato <b>EMBAIXO</b> da cadeira.", say: "Coloque o sapato embaixo da cadeira.",
+    objs: [{ e: "🪑", x: 50, y: 72, s: 150 }, { e: "🛏️", x: 88, y: 75, s: 150 }], item: { e: "👟", x: 85, y: 22, s: 64 }, zone: { x: 50, y: 78, w: 3, h: 10 }
+  },
+
+  {
+    t: "retire a caixa da <b>frente</b> do Dinossauro.", say: "Coloque a bola fora da caixa.",
+    objs: [{ e: "🦖", x: 50, y: 60, s: 56 }], item: { e: "📦", x: 50, y: 62, s: 150 }, outside: { x: 26, y: 25, w: 1, h: 1 }, zone: { x: 26, y: 25, w: 1, h: 1 }
   },
   {
     t: "Coloque o sol do lado <b>DIREITO</b> da nuvem.", say: "Coloque o sol do lado direito da nuvem.",
     objs: [{ e: "☁️", x: 50, y: 48, s: 150 }], item: { e: "☀️", x: 14, y: 78, s: 70 }, zone: { x: 64, y: 15, w: 33, h: 72 }
+  },
+  {
+    t: "Coloque o ursinho <b>do lado</b> do sol.", say: "Coloque o ursinho do lado do sol.",
+    objs: [{ e: "☀️", x: 50, y: 40, s:200 }, { e: "🥱", x: 50, y: 40, s: 150 }], item: { e: "🧸", x: 60, y: 90, s: 70 }, zone: { x: 50, y: 40, w: 20, h: 10 }
+  },
+  {
+    t: "Coloque a estrela do lado <b>ESQUERDO</b> da lua.", say: "Coloque a estrela do lado esquerdo da lua.",
+    dark: true, objs: [{ e: "🌙", x: 50, y: 48, s: 140 }], item: { e: "⭐", x: 86, y: 78, s: 64 }, zone: { x: 4, y: 15, w: 34, h: 72 }
   }
 ];
 
