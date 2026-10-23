@@ -43,13 +43,13 @@ body::before {
 .topo h1 {
     text-align: center;
     color: #fff7d9;
-    background: linear-gradient(#09e252, #15cfa7);
+    background: linear-gradient(90deg,#09e252, #15cfa7);
     border: 6px solid #6bfa9b;
     border-radius: 18px;
     padding: 12px;
     font-size: clamp(23px, 3vw, 48px);
     text-shadow: 2px 3px #067e60;
-    box-shadow: 0 5px 0 #5ef0dc;
+    box-shadow: 0 5px 0 #288d7f;
 }
 
 .voltar {
@@ -62,7 +62,7 @@ body::before {
     font-size: 52px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 0 #08b0b6;
+    box-shadow: 0 4px 0 #0c7579;
 }
 
 .pontuacao {
@@ -72,7 +72,7 @@ body::before {
     gap: 10px;
     padding: 10px;
     background: #fff6dc;
-    border: 4px solid #ffc642;
+    border: 4px solid #1d9c43;
     border-radius: 30px;
     font-size: 35px;
     font-weight: bold;
@@ -81,7 +81,7 @@ body::before {
 .estrela {
     color: #ffc400;
     font-size: 48px;
-    text-shadow: 2px 2px #b47700;
+    text-shadow: 2px 2px #8a6a2b;
 }
 
 main {
@@ -101,9 +101,10 @@ main {
     align-items: center;
     text-align: center;
     background: #fff6df;
-    border: 6px solid #ffb51b;
+    border: 10px dotted #2da52d;
     border-radius: 55px;
-    box-shadow: 0 6px 0 #c17c13;
+    box-shadow: 0 6px 0 #146114;
+    animation: infinite wobble 5s ease-in-out;
 }
 
 .pergunta h2 {
@@ -132,16 +133,19 @@ main {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background: linear-gradient(#a6d1ca, #2fe647);
+    background: linear-gradient(#c4eee7, #76db83);
     border: 7px solid var(--borda);
     border-radius: 48px;
     box-shadow: 0 7px 0 #fff3e3;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    animation: infinite wobble ease-in-out 4s;
+    
 }
 
 .cartao:hover:not(:disabled) {
     transform: translateY(-8px) scale(1.02);
+    filter: brightness(120%);
     box-shadow: 0 13px 0 #ffeacf;
 }
 
@@ -167,12 +171,12 @@ button:focus-visible {
 }
 
 .cartao.correto {
-    background: #e3ffd7;
+    background: #8cf160;
     border-color: #2ca83a;
 }
 
 .cartao.errado {
-    background: #ffdfd9;
+    background: #554f4e;
     border-color: #e45a43;
 }
 
@@ -280,4 +284,29 @@ button:focus-visible {
     .figura {
         font-size: 75px;
     }
+}
+
+@keyframes wobble {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes shine {
+    70% {
+        filter: brightness(100%);
+    }
+
+    80% {
+        filter: brightness(130%) saturate(150%);
+    }
+
+    90% {
+        filter: brightness(100%);
+    }
+
 }

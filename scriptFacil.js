@@ -123,7 +123,7 @@ function mostrarPergunta() {
         cartao.className = "cartao";
         cartao.style.setProperty(
             "--borda",
-            ["#78bd30", "#9460dc", "#28a9e8"][indice]
+            ["#1cdf26", "#7625e7", "#1cdfd5"][indice]
         );
 
         cartao.setAttribute(
